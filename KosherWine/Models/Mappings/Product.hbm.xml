@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="KosherWine" namespace="KosherWine.Models">
+  <class name="Product" table="Products">
+    <id name="Id">
+      <generator class="increment" />
+    </id>
+    <property name="Name" />
+    <many-to-one name="Producer" class="Producer" column="ProducerId" not-null="false" />
+    <property name="Alcohol" />
+    <property name="Volume" />
+    <property name="Color" />
+    <many-to-one name="Type" class="Type" column="TypeId" />
+    <many-to-one name="Sort" class="Sort" column="SortId" />
+    <property name="UnitPrice" />
+    <property name="UrlsToPhotoesRaw" column="UrlsToPhotoes" />
+    <many-to-one name="Category" class="Category" column="CategoryId" />
+    <property name="SaleStartDate" />
+    <property name="SaleEndDate" />
+    <property name="Discount" />
+    <property name="StockQuantity" />
+  </class>
+</hibernate-mapping> 

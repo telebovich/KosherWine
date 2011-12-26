@@ -1,0 +1,37 @@
+﻿@model KosherWine.Models.Email
+@{
+    ViewBag.Title = "Welcome to Kosher Wine";
+}
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
+<script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
+<div class="social">
+    <div id="plusone">
+        <g:plusone></g:plusone>
+    </div>
+    <div id="fb-root"></div>    
+    <script type="text/javascript">
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));</script>
+
+    <div class="fb-like" data-href="kosherwine.com.ua" data-send="true" data-width="450" data-show-faces="true"></div>
+    <div id="vk_like"></div>
+    <script type="text/javascript">
+        VK.Widgets.Like("vk_like", { type: "10" });
+    </script>
+</div>
+<div class="content">
+    <h1>Скоро здесь будет большой выбор кошерного вина.</h1>
+    <p id="notifyme">чтобы узнать, когда это произойдет, оставь здесь свой имейл.</p>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "contacts" }))
+    {
+    
+        @Html.TextBoxFor(m => m.Address, new { id = "email", name = "email", @Value = "Какой у тебя имейл?" })
+        <span id="agree" class="orange button">Оставить email</span> 
+    }
+</div>
+

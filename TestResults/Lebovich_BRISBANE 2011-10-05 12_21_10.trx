@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="bea2d5c9-2f59-4ad4-8542-fe7d9889d30f" name="Lebovich@BRISBANE 2011-10-05 12:21:10" runUser="BRISBANE\Lebovich" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Параметры тестирования по умолчанию" id="dbd1173d-379a-4845-8deb-47fbff5864da">
+    <Deployment runDeploymentRoot="Lebovich_BRISBANE 2011-10-05 12_21_10">
+      <DeploymentItem filename="C:\Users\Lebovich\Documents\Visual Studio 2010\Projects\KosherWine\KosherWine\bin\KosherWine.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2011-10-05T12:21:10.3671346+03:00" queuing="2011-10-05T12:21:12.7502452+03:00" start="2011-10-05T12:21:12.9302454+03:00" finish="2011-10-05T12:21:14.4002475+03:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Index" storage="c:\users\lebovich\documents\visual studio 2010\projects\kosherwine\kosherwine.tests\bin\debug\kosherwine.tests.dll" id="088cf1e6-65d1-5005-37cc-85ce1cbcaab2">
+      <Execution id="48231bdb-72a2-45c1-bc54-b4ae22810485" />
+      <TestMethod codeBase="C:/Users/Lebovich/Documents/Visual Studio 2010/Projects/KosherWine/KosherWine.Tests/bin/Debug/KosherWine.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KosherWine.Tests.Controllers.HomeControllerTest, KosherWine.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\lebovich\documents\visual studio 2010\projects\kosherwine\kosherwine.tests\bin\debug\kosherwine.tests.dll" id="3daa3561-4a85-396f-6d2a-91aab09985df">
+      <Execution id="8d95011b-e7dc-48ee-b8ce-81e5851596e6" />
+      <TestMethod codeBase="C:/Users/Lebovich/Documents/Visual Studio 2010/Projects/KosherWine/KosherWine.Tests/bin/Debug/KosherWine.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="KosherWine.Tests.Controllers.HomeControllerTest, KosherWine.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Отсутствующие в списке результаты" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Все загруженные результаты" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="088cf1e6-65d1-5005-37cc-85ce1cbcaab2" executionId="48231bdb-72a2-45c1-bc54-b4ae22810485" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3daa3561-4a85-396f-6d2a-91aab09985df" executionId="8d95011b-e7dc-48ee-b8ce-81e5851596e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="48231bdb-72a2-45c1-bc54-b4ae22810485" testId="088cf1e6-65d1-5005-37cc-85ce1cbcaab2" testName="Index" computerName="BRISBANE" duration="00:00:00.6996400" startTime="2011-10-05T12:21:13.0002455+03:00" endTime="2011-10-05T12:21:14.3102473+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48231bdb-72a2-45c1-bc54-b4ae22810485">
+      <Output>
+        <ErrorInfo>
+          <Message>Ошибка в Assert.AreEqual. Ожидается: &lt;Welcome to ASP.NET MVC!&gt;. Фактически: &lt;Welcome to Kosher Wine!&gt;. </Message>
+          <StackTrace>   в CallSite.Target(Closure , CallSite , Type , String , Object )
+   в System.Dynamic.UpdateDelegates.UpdateAndExecuteVoid3[T0,T1,T2](CallSite site, T0 arg0, T1 arg1, T2 arg2)
+   в KosherWine.Tests.Controllers.HomeControllerTest.Index() в C:\Users\Lebovich\Documents\Visual Studio 2010\Projects\KosherWine\KosherWine.Tests\Controllers\HomeControllerTest.cs:строка 25
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d95011b-e7dc-48ee-b8ce-81e5851596e6" testId="3daa3561-4a85-396f-6d2a-91aab09985df" testName="About" computerName="BRISBANE" duration="00:00:00.0003205" startTime="2011-10-05T12:21:14.3102473+03:00" endTime="2011-10-05T12:21:14.3102473+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d95011b-e7dc-48ee-b8ce-81e5851596e6">
+    </UnitTestResult>
+  </Results>
+</TestRun>
