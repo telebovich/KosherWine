@@ -6,7 +6,8 @@
     </id>
     <property name="Name" />
     <property name="Description" />
-    <bag name="ParentCategory" inverse="true" cascade="save-update">
+    <!-- one-to-one / -->
+    <bag name="ChildCategories" inverse="true" cascade="save-update">
       <key column="Id" />
       <one-to-many class="Category" />
     </bag>

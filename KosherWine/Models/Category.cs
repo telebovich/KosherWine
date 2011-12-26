@@ -48,7 +48,9 @@ namespace KosherWine.Models
             }
         }
 
-        public virtual Category ParentCategory { get; set; }        
+        public virtual Category ParentCategory { get; set; }
+
+        public virtual List<Category> ChildCategories { get; set; }
 
         private bool _isDisplayed;
         public virtual bool IsDisplayed
