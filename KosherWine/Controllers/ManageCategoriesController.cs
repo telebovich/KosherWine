@@ -9,7 +9,7 @@ using KosherWine.Models;
 
 namespace KosherWine.Controllers
 {
-    public class CategoriesController : Controller
+    public class ManageCategoriesController : Controller
     {
         //
         // GET: /Categories/

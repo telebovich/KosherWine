@@ -111,7 +111,7 @@
     <Compile Include="Configuration\WebConfigApplicationSettings.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdministrationController.cs" />
-    <Compile Include="Controllers\CategoriesController.cs" />
+    <Compile Include="Controllers\ManageCategoriesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Email\IMailer.cs" />
     <Compile Include="Email\Mail.cs" />
