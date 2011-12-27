@@ -5,8 +5,8 @@ using System.Web;
 
 using NHibernate;
 using NHibernate.Context;
+using KosherWine.Logging;
 
-// В следующей версии надо изменить код, чтобы сессия создавалась раз в запрос или раз в приложение
 namespace KosherWine.Models
 {
     public class Repository
@@ -17,7 +17,7 @@ namespace KosherWine.Models
             using (ITransaction tx = session.BeginTransaction())
             {
                 session.Save(entity);
-                tx.Commit();                
+                tx.Commit();         
             }
             session.Close();
         }

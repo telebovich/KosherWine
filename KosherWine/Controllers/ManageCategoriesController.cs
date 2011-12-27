@@ -16,7 +16,7 @@ namespace KosherWine.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            return View(Repository.GetAllItems<Category>());
         }
 
         //
@@ -32,6 +32,8 @@ namespace KosherWine.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.ParentCategory = new SelectList(Repository.GetAllItems<Category>(), "Id", "Name");
+            
             return View();
         } 
 
@@ -50,19 +52,9 @@ namespace KosherWine.Controllers
             // The following code works without subcategories
             try
             {
-                // TODO: Add insert logic here
-                               
-                try
-                {
-                    Repository.Add<Category>(category);
-                }
-                catch (Exception exception)
-                {
-                    Logger.Log.Error(string.Format("Unable to create Category: {0};{1}", 
-                        exception.Message, exception.InnerException));
-                }
-
-                return View("Index", Repository.GetAllItems<Category>());
+                // TODO: Add insert logic here              
+                Repository.Add<Category>(category);
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -102,33 +94,29 @@ namespace KosherWine.Controllers
         public ActionResult Delete(int id)
         {
             Category category = Repository.GetItemById<Category>(id);
-            Repository.Delete<Category>(category);
-            return RedirectToAction("Index", "Administration");
-            //return View(category);
+            return View(category);
         }
 
         //
         // POST: /Categories/Delete/5
 
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
         {
-            /*try
+            try
             {
                 // TODO: Add delete logic here
                 
                 Category category = Repository.GetItemById<Category>(id);
                 Repository.Delete<Category>(category);
                 
-                return RedirectToAction("Index", "Administration");
-                // return View("Index", Repository.GetAllItems<Category>());
+                return RedirectToAction("Index");
             }
             catch (Exception exception)
             {
                 Logger.Log.Error(string.Format("{0}\n{1}", exception.Message, exception.InnerException));
                 return View();
-            }*/
-            return View();
+            }
         }
 
         public ActionResult Administer()

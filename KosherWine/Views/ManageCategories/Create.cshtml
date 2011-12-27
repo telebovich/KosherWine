@@ -9,7 +9,7 @@
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 
-@using (Html.BeginForm()) {
+@{ Html.BeginForm(); }
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>Category</legend>
@@ -31,6 +31,13 @@
         </div>
 
         <div class="editor-label">
+            @Html.LabelFor(model => model.ParentCategory)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ParentCategory", string.Empty)
+        </div>
+
+        <div class="editor-label">
             @Html.LabelFor(model => model.IsDisplayed)
         </div>
         <div class="editor-field">
@@ -42,7 +49,7 @@
             <input type="submit" value="Create" />
         </p>
     </fieldset>
-}
+@{ Html.EndForm(); }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
