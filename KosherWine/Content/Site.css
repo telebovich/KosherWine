@@ -321,3 +321,13 @@ div#title {
 .tri-state {
     width: 6em;
 }
+
+
+div.head
+{
+    background-image: url("../Content/Images/pattern_top.png"); 
+    background-repeat: repeat-x; 
+    background-color: #010f4c; 
+    text-align: left; 
+    height: 50px;
+}
