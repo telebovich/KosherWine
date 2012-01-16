@@ -77,7 +77,7 @@ h5, h6 {
 /* you can specify a greater or lesser percentage for the 
 page width. Or, you can specify an exact pixel width. */
 .page {
-    width: 90%;
+    width: 900px; /*90%*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -330,4 +330,21 @@ div.head
     background-color: #010f4c; 
     text-align: left; 
     height: 50px;
+}
+
+div.gradient_start 
+{
+    background: -webkit-gradient(linear, left top, left bottom, from(#010f4c), to(#0054ae));
+    background: -moz-linear-gradient(top,#010f4c,#0054ae);
+    background: linear-gradient(top,#010f4c,#0054ae);
+    border-bottom: thin solid white; 
+    height: 180px;   
+}
+div.gradient_finish 
+{
+    background: -webkit-gradient(linear, left top, left bottom, from(#0054ac), to(#f7f7f7));
+    background: -moz-linear-gradient(top,#0054ac,#f7f7f7);
+    background: linear-gradient(top,#0054ac,#f7f7f7);
+    border-bottom: thin solid white; 
+    height: 380px;   
 }

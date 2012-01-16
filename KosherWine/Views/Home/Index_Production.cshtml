@@ -1,12 +1,30 @@
 ﻿@{
     ViewBag.Title = "Index_Production";
 }
-<div>
-    Hello World
-</div>
-<div>
 
-</div>
-<div>
-
+<div id="slider">
+    <div id="mask">
+        <ul>
+            <li>
+                <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/1.png")" /></a>
+            </li>
+            <li>
+                <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/2.png")" /></a>
+                <span>
+                    <h2>Hello</h2>
+                    <p></p>
+                </span>
+            </li>
+            <li>
+                <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/3.png")" /></a>
+                <span>
+                    <h2>Hello</h2>
+                    <p></p>
+                </span>
+            </li>
+        </ul>
+    </div>
+    <div id="progress"></div>
+    <div id="overlay" style="background-image: url('@Url.Content("~/Content/Images/overlay.png")')"></div>
+    <div id="pause" style="background-image: url('@Url.Content("~/Content/Images/paused.png")')"></div>
 </div>

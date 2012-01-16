@@ -6,6 +6,11 @@
     <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/ez.css")" rel="Stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/Layout.css")" rel="Stylesheet" type="text/css" />
+    <!-- css3 slider -->
+    <!-- link href="@Url.Content("~/Content/main.css")" rel="stylesheet" type="text/css" /-->
+    <!-- link href="@Url.Content("~/Content/reset.css")" rel="stylesheet" type="text/css" /-->
+    <link href="@Url.Content("~/Content/slider.css")" rel="stylesheet" type="text/css" />
+
     <script src="@Url.Content("~/Scripts/jquery-1.6.4.min.js")" type="text/javascript"></script>
     <script type="text/javascript" src="http://userapi.com/js/api/openapi.js?34"></script>
     <script type="text/javascript">
@@ -27,12 +32,11 @@
 </script>
 </head>
 <body>
-    <div class="head">&nbsp;</div>
-    <div class="page" style="border: thin solid red; margin-top: -50px;"> 
-        <div style="color: White; text-align: left; width: 800px; margin-left: auto; margin-right: auto; border: thin solid green;">
-            Hello World
-        </div>
-        <header>           
+    <div class="head" style="border-bottom: 1px solid #ffae00;">&nbsp;</div>
+    <div class="gradient_start">&nbsp;</div>
+    <div class="gradient_finish"></div>
+    <div class="page" style="margin-top: -710px;"> <!-- margin-top: -50px; -->
+    <header>           
             <div id="title"> 
                 <h1></h1>
             </div>
@@ -54,11 +58,27 @@
                 </ul>
             </nav>
         </header>
-        <section id="main">
+        <h1 style="text-align: left; color: White;">Witamy na stronie</h1>
+        <div style="float: right; margin-top: -19px; text-align: left; width: 340px;">
+            <img src="@Url.Content("~/Content/Images/basket.png")" alt="basket_image" style="float: left;"/>
+            <div style="border-left: thin solid white; text-align: center; height: 61px; width: 280px; float: right; line-height: 4em;">            
+                W koszyku sa
+            </div>
+        </div>
+        <div style="clear: both; float: right; width: 80px; border-top: thin solid white; background-color: #f18103; color: White;">zaplac</div>
+        <h1 style="clear: both; text-align: left;">KosherWine</h1>
+        <div style="float: right; width: 340px;">
+            @Html.TextBox("Search", "Wpisz szukana fraze", new { style="float: left; width: 256px; height: 30px; border: none;" })
+            <div style="width: 80px; background-color: #f18103; color: white; height: 34px; float: right; line-height: 2.5em;">
+                @Html.ActionLink("szukaj", "", null, new { style = "text-decoration: none; color: white;" })
+            </div>
+        </div>
+        
+        
+        <section> <!-- id="main" -->
             @RenderBody()
         </section>
-        <footer>
-        </footer>
+        <!-- footer></footer -->
     </div>
     <script type="text/javascript" src="@Url.Content("~/Scripts/site.js")"></script>
 </body>
