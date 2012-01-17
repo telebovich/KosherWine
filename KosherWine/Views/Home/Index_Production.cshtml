@@ -1,30 +1,101 @@
 ﻿@{
     ViewBag.Title = "Index_Production";
 }
+<section>
+    <div id="slider">
+        <div id="mask">
+            <ul>
+                <li>
+                    <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/1.png")" /></a>
+                </li>
+                <li>
+                    <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/2.png")" /></a>
+                    <span>
+                        <h2>Hello</h2>
+                        <p></p>
+                    </span>
+                </li>
+                <li>
+                    <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/3.png")" /></a>
+                    <span>
+                        <h2>Hello</h2>
+                        <p></p>
+                    </span>
+                </li>
+            </ul>
+        </div>
+        <div id="progress"></div>
+        <div id="overlay" style="background-image: url('@Url.Content("~/Content/Images/overlay.png")')"></div>
+        <div id="pause" style="background-image: url('@Url.Content("~/Content/Images/paused.png")')"></div>
 
-<div id="slider">
-    <div id="mask">
-        <ul>
-            <li>
-                <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/1.png")" /></a>
-            </li>
-            <li>
-                <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/2.png")" /></a>
-                <span>
-                    <h2>Hello</h2>
-                    <p></p>
-                </span>
-            </li>
-            <li>
-                <a href="#" title="Hello"><img src="@Url.Content("~/Content/Images/3.png")" /></a>
-                <span>
-                    <h2>Hello</h2>
-                    <p></p>
-                </span>
-            </li>
-        </ul>
+    
     </div>
-    <div id="progress"></div>
-    <div id="overlay" style="background-image: url('@Url.Content("~/Content/Images/overlay.png")')"></div>
-    <div id="pause" style="background-image: url('@Url.Content("~/Content/Images/paused.png")')"></div>
-</div>
+    </section>
+    <section style="float: right; width: 150px; margin-top: 10px; text-align: left;">
+        <h1 style="color: #fd9a22;">Newsletter</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p> 
+    </section>
+<section style="float: left; width: 300px; text-align: left; border-right: thin solid #dbdbdb; margin: 10px;">
+    
+    <h1 style="color:#fd9a22;">Menu glowne</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <h2 style="color: #00a4ec;">Odziez meska</h2>
+    <ul>
+        <li>Rossignol</li>
+        <li>Quicksilver</li>
+        <li>Roxy</li>
+        <li>Blizzard</li>
+    </ul>
+    <h2 style="color: #00a4ec;">Odziez damska</h2>
+    <ul>
+        <li>Rossignol</li>
+        <li>Quicksilver</li>
+        <li>Roxy</li>
+        <li>Blizzard</li>
+        <li>Coco chanel</li>
+        <li>Giorgio armani</li>
+        </ul>    
+</section>
+<section style="margin-top: 10px; text-align: left;">
+    <h1 style="color: #fd9222;">Najnowsze produkty</h1>
+    <ul style="list-style-type: none;">
+        <li style="float: left; width: 140px;">
+            <img src="" alt="image" />
+            <p style="color: #00a4ec;">Cziapka<br />
+            <span style="color: #fd9a22;">9.99</span></p>
+        </li>
+        <li style="float: left; width: 140px;">
+            <img src="" alt="image" />
+            <p style="color: #00a4ec;">Cziapka<br />
+            <span style="color: #fd9a22;">9.99</span></p>
+        </li>
+        <li style="float: left; width: 140px;">
+            <img src="" alt="image" />
+            <p style="color: #00a4ec;">Cziapka<br />
+            <span style="color: #fd9a22;">9.99</span></p>
+        </li>
+        <li style="float: left; width: 140px;">
+            <img src="" alt="image" />
+            <p style="color: #00a4ec;">Cziapka<br />
+            <span style="color: #fd9a22;">9.99</span></p>
+        </li>
+        <li style="float: left; width: 140px;">
+            <img src="" alt="image" />
+            <p style="color: #00a4ec;">Cziapka<br />
+            <span style="color: #fd9a22;">9.99</span></p>
+        </li>
+        <li style="float: left; width: 140px;">
+            <img src="" alt="image" />
+            <p style="color: #00a4ec;">Cziapka<br />
+            <span style="color: #fd9a22;">9.99</span></p>
+        </li>
+    </ul>
+</section>
+<section style="clear: both;">
+    <div style="width: 50%; border-top: thick solid #dbdbdb; background-image: url('@Url.Content("~/Content/Images/lines.png")'); background-repeat: repeat-x repeat-y; padding: 20px;">
+        <img src="@Url.Content("~/Content/Images/callto.png")" alt="banana" style="float: left;" />
+        <h3>Zadzvon do nas i dowiedz sie wszystkiego o nowych promocjach</h3>
+    </div>
+</section>
