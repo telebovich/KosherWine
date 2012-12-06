@@ -334,17 +334,17 @@ div.head
 
 div.gradient_start 
 {
-    background: -webkit-gradient(linear, left top, left bottom, from(#010f4c), to(#0054ae));
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#010f4c), to(#0054ae));
     background: -moz-linear-gradient(top,#010f4c,#0054ae);
-    background: linear-gradient(top,#010f4c,#0054ae);
+    background: linear-gradient(top,#010f4c,#0054ae);*/
     border-bottom: thin solid white; 
     height: 180px;   
 }
 div.gradient_finish 
 {
-    background: -webkit-gradient(linear, left top, left bottom, from(#0054ac), to(#f7f7f7));
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#0054ac), to(#f7f7f7));
     background: -moz-linear-gradient(top,#0054ac,#f7f7f7);
     background: linear-gradient(top,#0054ac,#f7f7f7);
-    border-bottom: thin solid white; 
+    border-bottom: thin solid white;*/
     height: 380px;   
 }
