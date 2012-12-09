@@ -121,6 +121,7 @@
     <Compile Include="Drivers\MonoSqliteDriver.cs" />
     <Compile Include="DataAccessLayer\IRepository.cs" />
     <Compile Include="DataAccessLayer\IProductRepository.cs" />
+    <Compile Include="DataAccessLayer\ProductRepositoryFake.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\ez-min.css" />

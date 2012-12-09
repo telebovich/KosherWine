@@ -4,10 +4,10 @@ namespace KosherWine.DataAccessLayer
 {
 	public interface IRepository<T>
 	{
-		T Get(int id);
+		T GetById(int id);
 		void Add(T entity);
-		void Delete(T entity);
-		void Save();
+		void Remove(T entity);
+		// void Save();
 	}
 }
 

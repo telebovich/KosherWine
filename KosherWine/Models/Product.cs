@@ -35,6 +35,9 @@ namespace KosherWine.Models
             }
         }
 
+		private string _description;
+		public virtual string Description { get; set; }
+
         public virtual Producer Producer { get; set; }
 
         private decimal _alcohol;
@@ -176,5 +179,17 @@ namespace KosherWine.Models
                 _stockQuantity = value;
             }
         }
+
+		public Product()
+		{
+
+		}
+
+		public Product(int id, string name, string description)
+		{
+			_id = id;
+			_name = name;
+			_description = description;
+		}
     }
 }
