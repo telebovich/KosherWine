@@ -4,7 +4,7 @@
 	position:relative;
 	margin:40px auto 0;
 	background-color:#362c30;
-	border:10px solid #362c30;
+	/*border:10px solid #362c30;*/
 	transform:rotate(0deg); /* Default rotation that the #slider <div> will come back to after the "shakey bounce" effect. For more information on transforms, check out: http://www.w3schools.com/css3/css3_2dtransforms.asp */
 	-ms-transform:rotate(0deg);
 	-moz-transform:rotate(0deg);
@@ -14,22 +14,22 @@
 	-webkit-transition:all 150ms ease-in;
 	-o-transition:all 150ms ease-in;
 }
-#slider:hover { /* Since we added the transistion property to #slider <div>, the previous properties will now animate to these new properties on hover */
-	background-color:#fff;
+/*#slider:hover { /* Since we added the transistion property to #slider <div>, the previous properties will now animate to these new properties on hover */
+/*	background-color:#fff;
 	border:10px solid #fff;
 	-webkit-animation:rotatey 400ms ease-out; /* Once we hover on #slider <div>, the "shakey bounce" animation will play (animating #slider <div>). For more information on animations, check out: http://www.w3schools.com/css3/css3_animations.asp */
-	-moz-animation:rotatey 400ms ease-out;
-}
-#slider:hover #pause { /* When we hover over #slider <div>, our #pause <div> will become visible - which will display the pause icon */
-	opacity:1;
-}
-#slider:hover #progress { /* When we hover over #slider <div>, the background color of our #progress <div> will become transparent. This will give the effect of the progress bar fading away on hover */
-	background-color:rgba(255,255,255,0.0);
-}
-#slider:hover ul, #slider:hover #progress, #slider:hover #overlay { /* When we hover over the unordered list <ul> inside of #slider <div> (the slides), all of our slide related animations will pause */
-	-moz-animation-play-state:paused;
+/*	-moz-animation:rotatey 400ms ease-out;
+}*/
+/*#slider:hover #pause { /* When we hover over #slider <div>, our #pause <div> will become visible - which will display the pause icon */
+/*	opacity:1;
+}*/
+/*#slider:hover #progress { /* When we hover over #slider <div>, the background color of our #progress <div> will become transparent. This will give the effect of the progress bar fading away on hover */
+/*	background-color:rgba(255,255,255,0.0);
+}*/
+/*#slider:hover ul, #slider:hover #progress, #slider:hover #overlay { /* When we hover over the unordered list <ul> inside of #slider <div> (the slides), all of our slide related animations will pause */
+/*	-moz-animation-play-state:paused;
 	-webkit-animation-play-state:paused;
-}
+}*/
 #mask { /* Creates the mask */
 	overflow:hidden;
 }
@@ -56,8 +56,8 @@
 	-moz-transition:all 150ms linear; /* Transition allows #progress <div> to fade when #slider <div> is hovered over */
 	-webkit-transition:all 150ms linear;
 	-o-transition:all 150ms linear;
-	-moz-animation:progress 18s infinite; /* The progress animation will increase #progress's <div> width from 1px to the full width of the slide (600px) */
-	-webkit-animation:progress 18s infinite;
+	-moz-animation:progress 13s infinite; /* The progress animation will increase #progress's <div> width from 1px to the full width of the slide (600px) */
+	-webkit-animation:progress 13s infinite;
 }
 #overlay { /* Creates the cool gradient effect ontop of the slider */
 	width:600px;
@@ -69,8 +69,8 @@
 	background-repeat:no-repeat;
 	pointer-events:none;
 	opacity:0.5;
-	-moz-animation:overlay-fade 18s infinite; /* The animation will fade #overlay <div> when the slider is finished */
-	-webkit-animation:overlay-fade 18s infinite;
+	-moz-animation:overlay-fade 13s infinite; /* The animation will fade #overlay <div> when the slider is finished */
+	-webkit-animation:overlay-fade 13s infinite;
 }
 #slider ul { /* Styling the unordered list <ul> that contains our slides <li>'s */
 	width:2400px; /* The calculated width of all the slides (4 slides x 600px in width) */
@@ -79,8 +79,8 @@
 	margin:0;
 	padding:0;
 	list-style:none;
-	-moz-animation:slide-animation 18s infinite; /* You can change the speed of the slide by changing the 18s. Make sure to update the speed of #overlay and #progress too. Keep in mind that this will also effect the speed of the transitions */
-	-webkit-animation:slide-animation 18s infinite;
+	-moz-animation:slide-animation 13s infinite; /* You can change the speed of the slide by changing the 18s. Make sure to update the speed of #overlay and #progress too. Keep in mind that this will also effect the speed of the transitions */
+	-webkit-animation:slide-animation 13s infinite;
 }
 #slider li { /* Styling the list elements <li>'s that contain each slide */
 	width:600px;
@@ -119,6 +119,17 @@
 	font-weight:normal;
 	color:#fff;
 	text-shadow:1px 1px 1px #362c30;
+}
+#slider-shadow {
+	width:100%;
+	height:260px;
+	background-image:url(../images/slider-shadow.png);
+	background-position:center bottom;
+	background-repeat:no-repeat;
+	margin:10px auto 0;
+}
+#slider li:last-of-type {
+	background-color:#362c30;
 }
 @-webkit-keyframes slide-animation { /* Creates our animation that cycles through the slides for WebKit browsers. This is set up to cycle through 4 slides. If you plan on changing that number, you will have to divide 100 by the amount of slides and figure out the formula from there (while also changing the formulas for the progress and overlay-fade animations). Right now it's set up for each slide to take roughly 25% of the animation time. As you can see, this is where it can get a bit sticky changing the amount of slides. I'd suggest playing around with some basic animations first to get a handle on how they work. For an in depth explanation of animations, check out: http://www.w3schools.com/css3/css3_animations.asp */
 	0% {opacity:0;}
