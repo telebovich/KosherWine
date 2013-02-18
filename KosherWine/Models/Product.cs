@@ -7,6 +7,8 @@ using NHibernate;
 
 namespace KosherWine.Models
 {
+	public enum Color { black, white }
+
     public class Product: Repository
     {
         private int _id;
@@ -35,51 +37,11 @@ namespace KosherWine.Models
             }
         }
 
-		private string _description;
 		public virtual string Description { get; set; }
 
         public virtual Producer Producer { get; set; }
 
-		private decimal _alcohol;
-		public virtual decimal Alcohol
-		{
-			get
-			{
-				return _alcohol;
-			}
-			set
-			{
-				_alcohol = value;
-			}
-		}
-
-		private decimal _volume;
-		public virtual decimal Volume
-		{
-			get
-			{
-				return _volume;
-			}
-			set
-			{
-				_volume = value;
-			}
-		}
-
         public virtual Type Type { get; set; }
-
-		private string _color;
-		public virtual string Color
-		{
-			get
-			{
-				return _color;
-			}
-			set
-			{
-				_color = value;
-			}
-		}
 
         public virtual Sort Sort { get; set; }
 
@@ -96,11 +58,17 @@ namespace KosherWine.Models
             }
         }
 
+		public virtual int Alcohol { get; set; }
+
+		public virtual int Volume { get; set; }
+
+		public virtual Color Color { get; set; }
+
         private string _urlsOfPhotoesRaw;
         public virtual string UrlsToPhotoesRaw
         {
             get
-            {
+            {	
                 return _urlsOfPhotoesRaw;
             }
             set
@@ -179,17 +147,5 @@ namespace KosherWine.Models
                 _stockQuantity = value;
             }
         }
-
-		public Product()
-		{
-
-		}
-
-		public Product(int id, string name, string description)
-		{
-			_id = id;
-			_name = name;
-			_description = description;
-		}
     }
 }
