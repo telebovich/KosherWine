@@ -52,6 +52,7 @@ namespace KosherWine
                 .DataBaseIntegration(db =>
                     {
                         db.Dialect<SQLiteDialect>();
+						db.Driver<KosherWine.Drivers.MonoSqliteDriver>();
                         db.ConnectionStringName = "KosherWineSQLite";
                         db.BatchSize = 100;
                     })

@@ -4,11 +4,15 @@ namespace KosherWine.DataAccessLayer
 {
 	public static class UnitOfWork
 	{
-		public static IUnitOfWork Current { get; set; }
+		private static IUnitOfWorkFactory _unitOfWorkFactory;
+		private static IUnitOfWork _innerUnitOfWork;
+
+		public static IUnitOfWork Current { get; private set; }
 
 		public static IUnitOfWork Start ()
 		{
-			throw new NotImplementedException();
+			_innerUnitOfWork = _unitOfWorkFactory.Create ();
+			return _innerUnitOfWork;
 		}
 	}
 }

@@ -14,16 +14,21 @@ namespace KosherStore.Linux.Tests
 		[Test]
 		public void CanStartUnitOfWork ()
 		{
-			var factory = _mocks.DynamicMock<IUnitOfWorkFactory>();
-			var unitOfWork = _mocks.DynamicMock<IUnitOfWork>();
+			var factory = _mocks.DynamicMock<IUnitOfWorkFactory> ();
+			var unitOfWork = _mocks.DynamicMock<IUnitOfWork> ();
 
 			var fieldInfo = typeof(UnitOfWork).GetField ("_unitOfWorkFactory", 
-			                                             BindingFlags.Static | 
-			                                             BindingFlags.SetField | 
-			                                             BindingFlags.NonPublic);
+			    BindingFlags.Static | BindingFlags.SetField | BindingFlags.NonPublic
+			);
 			fieldInfo.SetValue (null, factory);
 
-			IUnitOfWork uow = UnitOfWork.Start();
+			using (_mocks.Record()) {
+				Expect.Call (factory.Create ()).Return (unitOfWork);
+			}
+
+			using (_mocks.Playback ()) {
+				IUnitOfWork uow = UnitOfWork.Start();
+			}
 		}
 
 		public UnitOfWorkTest ()
